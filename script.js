@@ -1,6 +1,6 @@
 // Replace these with your actual API keys
-const WEATHER_API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
-const GEOCODING_API_KEY = 'YOUR_GOOGLE_MAPS_API_KEY';
+const WEATHER_API_KEY = 'f39ce3bd175c5424d6d04a08de0a2383';
+const GEOCODING_API_KEY = '66c7025f2b883079788011svk7f9968';
 
 function updateTime() {
     const now = new Date();
@@ -45,7 +45,11 @@ if ("geolocation" in navigator) {
             .then(data => {
                 const temperature = data.main.temp;
                 const description = data.weather[0].description;
-                document.getElementById("weather").innerHTML = `Weather: ${temperature}°C, ${description}`;
+                const iconCode = data.weather[0].icon;
+                const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+                document.getElementById("weather").innerHTML = `<img src="${iconUrl}" alt="${description}" style="vertical-align:middle; margin-right:10px;">
+                Weather: ${temperature}°C, ${description}`;
             })
             .catch(error => {
                 console.error("Error fetching weather data:", error);
