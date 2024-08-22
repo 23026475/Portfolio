@@ -1,0 +1,5 @@
+Geolocation API to get the user's location.
+Reverse Geocoding API to convert coordinates into a readable address.
+Weather API to fetch the current weather based on the user's location.
+JavaScript to update the time and manage the API calls.
+HTML and CSS to structure and style the page.
