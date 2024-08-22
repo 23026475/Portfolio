@@ -1,33 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if the Geolocation API is available
-    if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(position => {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+// Check if Geolocation is available
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
 
-            // Display the location information
-            document.getElementById('location').textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        // Display the user's location
+        const locationDiv = document.getElementById("location");
+        locationDiv.innerHTML = `Latitude: ${lat.toFixed(2)}, Longitude: ${lon.toFixed(2)}`;
 
-            // Fetch weather data using OpenWeatherMap API
-            const apiKey = 'your_openweathermap_api_key';
-            const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+        // Fetch weather data using a weather API
+        const apiKey = 'https://geocode.maps.co/api/verify_account/66c6f9f03083a612151762slf58b9c7';
+        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
-            fetch(weatherApiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const weatherDescription = data.weather[0].description;
-                    const temperature = data.main.temp;
-                    document.getElementById('weather').textContent = `Weather: ${weatherDescription}, Temperature: ${temperature}°C`;
-                })
-                .catch(error => {
-                    document.getElementById('weather').textContent = 'Unable to retrieve weather data.';
-                    console.error('Error fetching weather data:', error);
-                });
-        }, error => {
-            document.getElementById('location').textContent = 'Unable to retrieve location.';
-            console.error('Error getting location:', error);
-        });
-    } else {
-        document.getElementById('location').textContent = 'Geolocation is not supported by your browser.';
-    }
-});
+        fetch(weatherApiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const weatherDiv = document.getElementById("weather");
+                const temperature = data.main.temp;
+                const description = data.weather[0].description;
+
+                weatherDiv.innerHTML = `Temperature: ${temperature}°C<br>Description: ${description}`;
+            })
+            .catch(error => {
+                console.error("Error fetching weather data:", error);
+                document.getElementById("weather").innerHTML = "Failed to fetch weather data.";
+            });
+
+    }, function(error) {
+        document.getElementById("location").innerHTML = "Unable to retrieve location.";
+        console.error("Error retrieving location:", error);
+    });
+} else {
+    document.getElementById("location").innerHTML = "Geolocation is not supported by your browser.";
+}
