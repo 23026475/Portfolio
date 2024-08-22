@@ -1,0 +1,259 @@
+body{
+    background-color: F5F5DC;
+    font-family: cursive;
+    color: #E2725B;
+    font-family: cursive;
+}
+.logo{
+  display: block;
+  width: 25%;
+  transform: translate(150%, 0%);
+  margin-bottom: 15px;
+
+}
+.heads nav {
+    background-color: #E2725B;
+    list-style :inside;
+    text-align : right;
+    width: 100%;
+    height: 30px;
+    position:relative;
+    
+  }
+.heads nav a {
+    float: right;
+    display: block;
+    color: #0C4D32;
+    padding: 8px 10px;
+    text-decoration:underline;
+    font-size: 14px;
+  }
+  .container {
+    background-image: url(b10.png);
+    background-repeat: no-repeat,repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 55%;
+   
+  }
+
+  .Sale{
+    position: absolute;
+    width: 50%;
+    height: fit-content;
+    background-color: beige 0.4;
+    backdrop-filter: blur(5px);
+    outline-style:outset;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+    text-align: center;
+  }
+
+  .Sale h1{
+    width: 100%;
+    color: beige;
+    position:relative;
+    font-weight: 500px;
+    margin-top: 10%;
+  }
+
+  .Sale p{
+    outline-color: #0C4D32;
+    background-color: #E2725B;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    color:#0C4D32;
+    font-weight: 200px;
+  }
+
+  .Sale button{
+    width: 95px;
+    height: 32px;
+    margin-top: 25px;
+    background-color: beige;
+    color:#0C4D32;
+    border-radius: 12px;
+    border: 2px solid #0C4D32;
+    position: relative;
+    text-shadow: #0C4D32;
+    font-weight: 300;
+  }
+
+  .Sale button:hover{
+    background-color: #E2725B;
+    color: beige;
+    box-shadow: 0 15px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .saleSection{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    position: relative;
+    align-content: center;
+    width: 100%;
+  }
+  .seeMore{
+    color:#E2725B;
+    text-align: center;
+
+  }
+  .seeMore a{
+    display: block;
+    border: #E2725B;
+    color: #0C4D32;
+  }
+  .saleItem{
+    color: #0C4D32;
+    font-size: medium;
+    text-align: justify;
+    background-color: antiquewhite;
+    margin-top: 13px;
+    width: 23%;
+    height: 14%;
+  }
+  .saleItem:hover{
+    background-color: gray;
+    border: 2px #0C4D32;
+    color: beige;
+    box-shadow: 0 15px 20px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .saleItem img{
+    width: 100%;
+    height: 253%;
+
+  }
+
+  .CatCap{
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#E2725B;
+    display: flex;
+    height: 56%;
+    width: 100%;
+    margin-top: 30px;
+    
+  }
+  .texthead{
+    position: relative;
+    text-align: center;
+    width: 15%;
+  }
+  .texthead h2{
+    position:relative;
+    color:#0C4D32;
+
+  }
+  .texthead h3{
+    position: relative;
+    color:beige;
+    margin-top: 30px;
+    writing-mode:vertical-rl;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 900;
+    font-size:xx-large;
+  }
+  .textImg{
+    position: relative;
+    background-image: url(b9.png);
+    
+    background-repeat: no-repeat,repeat;
+    background-size: cover;
+    text-align: center;
+    width: 85%;
+  }
+   hr{
+    
+    color:#0C4D32;
+  }
+  .Categories{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    position: relative;
+    align-content: center;
+    width: 100%;
+    background-color: aliceblue;
+  }
+  .category{
+    color:#E2725B;
+    font-size: medium;
+    text-align: justify;
+    margin-top: 13px;
+    width: 23%;
+    height: 14%;
+  }
+  .catB{
+    border: #0C4D32;
+    background-color: #0C4D32;
+    color: beige;
+    height: 45%;
+    width:100%
+  }
+  .category:hover{
+    background-color: #0C4D32;
+    color: beige;
+
+  }
+  .category img{
+    width: 100%;
+    height: 253%;
+
+  }
+
+  .Inspirations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: space-between;
+    justify-items: center;
+
+    
+  }
+  h3{
+    text-align: center;
+
+    font-weight: bold;
+    font-size: larger;
+
+
+  }
+  .p1{
+    text-align: center;
+
+    color:#0C4D32;
+  }
+ .CatCap .textImg  .p2{
+    color: beige;
+    font-size: larger;
+    font-style: italic;
+  }
+  .mySlide{
+    background-color:#F9CEBD ;
+    color: #0C4D32;
+    text-align: center;
+
+    width: 50%;
+  
+  }
+  footer{
+    margin-top: 80px;
+    color:#E2725B;
+    background-color:aliceblue;
+    font-family:'Times New Roman', Times, serif;
+    width: 100%;
+    position: relative;
+    text-align:center;
+    align-items: normal;
+  }
+  footer img{
+    width: 25%;
+    position: relative;
+  }
+ 

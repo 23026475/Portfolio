@@ -1,0 +1,114 @@
+body{
+    background-color: beige;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    column-gap: #0C4D32;
+}
+.container{
+    background-image: url(b10.png);
+    
+    background-repeat: no-repeat,repeat;
+    background-size: cover;
+    border-radius: 22px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    align-content: center;
+}
+/* Style the label to display next to the inputs */
+label {
+    color: F5F5DC;
+    padding: 12px 12px 12px 0;
+    font-weight: bold;
+    font-size: x-large;
+    margin-right: 2%;
+    vertical-align: middle;
+    height: 30px;
+    display: inline-block;
+    float: none;
+    clear: left;
+    width: 150px;
+    text-align: left
+    
+    }
+    legend{
+        color: beige;
+        position: relative;
+    }
+    fieldset{
+
+        position: relative;
+        width: 65%;
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+
+/*Styling the Inputs*/
+  input[type=text], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: F9CEBD;
+    display: inline-block;
+    float: none;
+  }
+  .logo{
+    display: block;
+    width: 25%;
+    margin-bottom: 45px;
+    margin-left: 37%;
+    margin-right: 37%;
+    }
+
+  input[type=password], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: F9CEBD;
+  }
+  button{
+    background-color: E2725B ;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 45%;
+    margin-top: 75px;
+    height: 6.5%;
+    font-size: medium;
+    font-weight: bold;
+}
+p{
+  font-weight: bold;
+  font-style: italic;
+
+}
+.links{
+  color:beige;
+}
+.mySlide{
+  background-color:#F9CEBD ;
+  color: #0C4D32;
+  text-align: center;
+
+  width: 50%;
+
+}
+footer{
+  margin-top: 80px;
+  color:#E2725B;
+  background-color:aliceblue;
+  font-family:'Times New Roman', Times, serif;
+  width: 100%;
+  position: relative;
+  text-align:center;
+  align-items: normal;
+}

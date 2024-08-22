@@ -1,0 +1,245 @@
+/*_________________________________________________Navigation Bar__________________________________________________________________________________*/
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background-color: black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+
+header .logo{
+    margin-top: 5px;
+    width:75px;
+    cursor: pointer;
+    background-color: snow;
+    float: left;
+}
+header .navbar{
+    position: relative;
+    height: 7%;
+    display: flex;
+    width: 100%;
+
+}
+
+header .navbar ul li{
+    list-style: none;
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    color:whitesmoke;
+    font-size: 13px;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+header .navbar ul li a:hover{
+    background-color: ghostwhite;
+    color: black;
+    
+}
+header .navbar ul li ul{
+    position: absolute;
+    width: 150px;
+    background-color: black;
+    text-align: center;
+    z-index: 1;
+    display: none;
+}
+header .navbar ul li ul li{
+    width:100%;
+    color: black;
+
+}
+header .navbar ul li ul li ul{
+    left: 100%;
+    top: 0;
+}
+header .navbar ul li:focus-within >ul,
+header .navbar ul li:hover > ul{
+    display: block;
+
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.875em;
+}
+
+/* Paragraph Styles */
+p {
+    margin: 10px 0;
+}
+
+/* Ordered List Styles */
+ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Unordered List Styles */
+ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+/* Definition List Styles */
+dl {
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Blockquote Styles */
+blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-left: 5px solid #ccc;
+}
+
+blockquote p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        margin-top: 20px;
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    h5 {
+        font-size: 0.95em;
+    }
+
+    h6 {
+        font-size: 0.85em;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+}
+
+
+
+footer a{
+    color:black;
+    text-decoration: none;
+    margin-left: 15px;
+}

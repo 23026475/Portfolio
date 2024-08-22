@@ -1,0 +1,245 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+button:hover{
+    cursor:pointer;
+}
+h1{
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 50px;
+}
+h2{
+    text-align: left;
+}
+h3{
+    text-align: right;
+}
+
+/*-----------------------------------------Navigation---------------------------------------------*/
+.logo{
+    
+    position: relative;
+    width: 135px;
+    top: 0;
+    left: 0;
+}
+.navigation{
+
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    float:right;
+    vertical-align: middle;
+    margin-right: 0;
+    
+}
+.navigation .buttonNav ul{
+    list-style-type: none;
+    margin-right: 7px;
+    padding: 0;
+
+}
+
+.navigation .buttonNav ul li{
+    display: inline;
+    margin: auto;
+
+}
+.menuNav{
+    
+    position: relative;
+    display: inline-block;
+    
+}
+
+.menuNav .menu{
+    color: white;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    margin-top: 20px;
+}
+.menuNav .menu img{
+    width: 30px;
+    height: 30px;
+}
+.menuContent{
+    display: none;
+    position: absolute;
+    background-color: gainsboro;
+    min-width: 160px;
+    z-index: 1;
+}
+.menuContent a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menuContent a:hover {background-color: white;}
+.menuNav:hover .menuContent{display: block;}
+.menuNav:hover .menu {background-color: transparent;}
+
+/*--------------------------------------------------------------------------------------*/
+.b1{
+    background-color: white;
+    color: black;
+}
+.b2{
+    background-color: black;
+    color: white;
+}
+
+.b1,.b2{
+    border-radius: 25px;
+    width: fit-content;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*--------------------------------------------------------------------------------------*/
+h1 , h5 {
+    text-align: center;
+}
+h1{
+    margin-top: 35px;
+}
+/*--------------------------------------------------------------------------------------*/
+.Emailbox{
+    margin-top: 35px;
+    position: relative;
+    margin-left: 27%;
+    margin-right: 27%;
+    text-align: center;
+    
+}
+
+.email , .signup{
+    border-radius: 25px;
+    height: 45px;
+    background-color: white;
+    font-weight: bold;
+    
+}
+
+.email{
+    width: 65%;
+    background-image: url('send_resized\ \(1\).png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+.signup{
+    width: 19%;
+    background-color: black;
+    color: white;
+}
+/*--------------------------------------------------------------------------------------*/
+.ac{
+    margin-left: 3%;
+    margin-right: 3%;;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.fp{
+    font-weight: bold;
+    font-size: larger;
+    text-align: left;
+}
+.ea{
+    font-weight: normal;
+    font-size: medium;
+    text-align: right;
+}
+.ea a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+/*--------------------------------------------------------------------------------------*/
+.bigbox{
+    margin-top: 2%;
+    position: relative;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    width: 95%;
+    margin-left: 2.5%;
+    
+}
+.bigbox p{
+    font-size: smaller;
+    font-weight: 100;
+}
+.bigbox div{
+    border-radius: 15px;
+    
+} 
+.bigbox p,h4,h6{
+    margin-left: 5%;
+}
+
+
+.box1{background-color: mediumseagreen;}
+.box2{background-color: black; color: aliceblue;}
+.box2 button{background-color: white;}
+.box3{background-color: plum;}
+.box4{background-color: yellow;}
+
+.b3{
+    background-color:black;
+    width: 35px;
+    border-radius: 15px;
+}
+
+.icons{
+    
+    width: 100%;
+}
+.bigbox hr{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.but{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.but .fn{
+    margin-top: 5%;
+    line-height: 0;
+    
+}
+.but .fn p{
+    font-style: italic;
+    font-size:x-small;
+    font-weight: 50;
+}
+
+.buttie{
+    position: relative;
+    display:flex;
+    flex-direction: column-reverse;
+}
+.buttie button{
+    align-self:center;
+    width: 35px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+.fn h4{
+    font-size:x-large;
+}
+/*--------------------------------------------------------------------------------------*/
+footer a{
+    color:black;
+    text-decoration: none;
+    margin-left: 15px;
+}
+

@@ -1,0 +1,32 @@
+body{
+    color-scheme: dark;
+}
+.logo{
+  display: block;
+  width: 25%;
+  transform: translate(150%, 0%);
+  margin-bottom: 15px;
+}
+  nav {
+    
+    background-color: #E2725B;
+    list-style :inside;
+    text-align : right;
+    width: 100%;
+    height: 30px;
+    position:relative;
+    
+  }
+  nav a {
+    float: right;
+    display: block;
+    color: #0C4D32;
+    padding: 8px 10px;
+    text-decoration:underline;
+    font-size: 14px;
+  }
+  h1{
+    position:relative;
+    text-align: center;
+    color: #0C4D32;
+  }

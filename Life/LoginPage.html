@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="LoginPage.CSS">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="navbar" id="navbar">
+                <img src="LifeLogo-removebg-preview.png" class="logo">
+                    <ul>
+                        <li><a href="LandingPage.html">Home</a></li>
+                        <li><a href="Investment.html">Offers</a>
+                            <ul>
+                                <li><a href="">Investments</a>
+                                    <ul>
+                                        <li><a href="#info1">Individual Investment</a></li>
+                                        <li><a href="#info2">Retirement</a></li>
+                                        <li><a href="#info3">Education Savings</a></li>
+                                        <li><a href="#info4">Specialized Investment</a></li>
+                            
+                                    </ul>
+                                </li>
+                                <li><a href="">Services</a>
+                                    <ul>
+                                        <li><a href="">Financial Planning</a></li>
+                                        <li><a href="">Wealth Management</a></li>
+                                        <li><a href="">Advisory Services</a></li>
+                                        <li><a href=""> Insurance</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="LoginPage.html">Log In</a></li>
+                    </ul>
+            </div>
+        </header>
+        <form id="investmentLogin" action="/submit-investment" method="post">
+           
+
+            <img src="LifeLogo-removebg-preview.png" alt="User icon image" width="100px" height="100pxS">
+            <p class="Intro1"> User Login.</p><br><br>
+            <input type="email" id="email" name="email"  placeholder="Enter your email....."><br><br>
+            <input type="password" id="UserPassword" name="UserPassword" placeholder="Password" required><br>
+
+            <p class="FP1"> <u><a href="#" id="forgot-password-link">Forget Password?</a></u></p>
+
+            <button type="button" onclick="submitForm()"> Login</button>
+            
+
+
+        </form>
+
+        <script>
+
+            function submitForm() {
+            document.getElementById('investmentLogin').submit();
+            }
+
+            src="login.js"
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const forgotPasswordLink = document.getElementById('forgot-password-link');
+            
+                forgotPasswordLink.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the default link behavior
+                    window.location.href = 'PasswordReset.html'; // Redirect to the password reset page
+                });
+            });
+
+        </script>
+    </body>
+</html>

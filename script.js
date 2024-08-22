@@ -1,6 +1,6 @@
 // Replace these with your actual API keys
 const WEATHER_API_KEY = 'f39ce3bd175c5424d6d04a08de0a2383';
-const GEOCODING_API_KEY = '66c7025f2b883079788011svk7f9968';
+const GEOCODING_API_KEY = 'f39ce3bd175c5424d6d04a08de0a2383';
 
 function updateTime() {
     const now = new Date();

@@ -1,0 +1,91 @@
+<html> 
+    <head>
+        <title> Business Information</title>
+        <link rel="stylesheet" href="BusinessDetailsForm.CSS">
+    </head>
+    <body>
+
+        <div class="form">
+            <h1> <img src="LOGO5-removebg-preview.png" alt=" Cozy Creation logo" width="250" height="100"> </h1>
+
+            
+            <p>
+                <h3> Business Details</h3><br><br>
+                <div>
+        
+                    <form >
+                        <label for="BusinessName"> Business Name:</label>
+                        <input type="text" name="BusinessName" id="BusinessName"><br>
+            
+                        <option value=""></option>
+                        <label for="category"> Category:</label>
+                        <select id="category" name="category">
+                            <option value=" CHEST AND DRAWERS"> CHEST AND DRAWERS</option>
+                            <option value="BEDS">BEDS</option>
+                            <option value="CHAIRS">CHAIRS</option>
+                            <option value="CABINETS">CABINETS</option>
+                            <option value="LOUNGE">LOUNGE</option>
+                            <option value="DINING SETS"> DINING SETS</option>
+            
+                        </select>
+                        <br><br>
+            
+                    </form>
+        
+                    <div>
+        
+                        <form action="/upload" method="post" enctype="multipart/form-data" id="frm1" action="/action_page.php">
+                           
+        
+                            <label for="catName">Name of the item:</label>
+                            <input type="text" name="catName" id="catName"><br><br>
+                            <label for="catPrice">Price of the item: </label>
+                            <input type="number" id="catPrice" name="catPrice"><br><br>
+        
+                            <label for="imageUpload">Upload item image:</label>
+                            <input type="file" id="imageUpload" name="image">
+                            <input type="submit" value="Upload"><br><br>
+        
+                            <input type="button" value="Add Product">
+                           <a href="furniture.html"> <input type="button" onclick="myFunction()" value="Submit"></a>
+                           <br>
+                           <p>Already have an account yet?</p>
+                           <a href="LogIn.html"> <u>Click to Log in</u></a>
+
+
+
+                          </form>
+        
+        
+                    </div>
+        
+                </div>
+        
+
+
+
+            </p>
+
+        </div> 
+        <script>
+            function myFunction() {
+              document.getElementById("frm1").Submit();
+            }
+        </script>
+
+<footer>
+    <img src="logo6-removebg-preview.png">
+    
+    
+    <p>subscribe to our news letter</p>
+    <input type="email" id="email"><br>
+    <a href="About Us.html">About Us</a>|
+    <a href="HomePage.html">Home</a>
+    <p>Author: Ndivhuwo, Rilinde</p>
+    <hr>
+    2024 Cozy. All Rights Reserved
+</footer>
+
+
+    </body>
+</html>

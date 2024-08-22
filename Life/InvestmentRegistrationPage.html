@@ -1,0 +1,256 @@
+<html>
+    <head> 
+        <title>Investment Registration Page</title>
+        <link rel="stylesheet" href="InvestmentRegistrationPage.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="navbar" id="navbar">
+                <img src="LifeLogo-removebg-preview.png" class="logo">
+                    <ul>
+                        <li><a href="LandingPage.html">Home</a></li>
+                        <li><a href="Investment.html">Offers</a>
+                            <ul>
+                                <li><a href="">Investments</a>
+                                    <ul>
+                                        <li><a href="#info1">Individual Investment</a></li>
+                                        <li><a href="#info2">Retirement</a></li>
+                                        <li><a href="#info3">Education Savings</a></li>
+                                        <li><a href="#info4">Specialized Investment</a></li>
+                            
+                                    </ul>
+                                </li>
+                                <li><a href="">Services</a>
+                                    <ul>
+                                        <li><a href="">Financial Planning</a></li>
+                                        <li><a href="">Wealth Management</a></li>
+                                        <li><a href="">Advisory Services</a></li>
+                                        <li><a href=""> Insurance</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="LoginPage.html">Log In</a></li>
+                    </ul>
+            </div>
+        </header>
+        <form id="investmentForm" action="/submit-investment" method="post"  >
+
+            <p> <img src="LifeLogo-removebg-preview.png" alt="Logo image" height="50px" width="100px"></p>
+            <p class="CI"> Investment Registration Page</p>
+            <p class="Intro1"> Welcome to Life As It Goes Investment Registration</p>
+
+            <div class="intro">
+                <p>Thank you for your interest in investing with Life As It Goes. 
+                    This registration page is designed to guide you through the process of becoming an investor with us. 
+                    Here, you will provide essential information to help us understand your investment goals and verify your eligibility. 
+                </p>
+            </div>
+
+
+            <form >
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <label for="fname">Full Name:</label>
+                    <input type="text" id="fname" name="fname" ><br><br>
+                    
+                    <label for="DoB"> Date Of Birth:</label>
+                    <input type="date" id="DoB" name="DoB"><br><br>
+
+                    <label for="nation">Nationality:</label>
+                    <input type="text" id="nation" name="nation"><br><br>
+
+                    <p class="CI"><u>Contact Information</u></p><br>
+                    <label for="email"> Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <lable for="contact">Telephone:</lable>
+                    <input type="number" id="contact" name="contact" ><br><br>
+
+                    <p class="CI">  <u>Address</u></p>
+                    <label for="cname">City:</label>
+                    <input type="text" id="cname" name="cname" ><br><br>
+
+                    <label for="sname">Street:</label>
+                    <input type="text" id="sname" name="sname" ><br><br>
+
+                    <label for="Pcode">Postal Code:</label>
+                    <input type="number" id="Pcode" name="Pcode" ><br><br>
+                
+                
+                </fieldset>
+            </form>
+
+
+          <form >
+            <fieldset>
+                <legend>Investment Details</legend>
+                <label for="AtI">Amount to Invest:</label>
+                <input type="number" id="AtI" name="AtI" ><br><br>
+
+                <!-- Investment Type Selection -->
+                <label for="investmentOption">Investment Option:</label>
+                <button type="button" onclick="toggleOptions('investmentOptions')">&#62;</button>
+                <div id="investmentOptions" class="options">
+                    <label>
+                        <input type="radio" name="investmentOption" value="stocks" required>
+                        Stocks
+                    </label><br>
+                    <label>
+                        <input type="radio" name="investmentOption" value="bonds">
+                        Bonds
+                    </label><br>
+                    <label>
+                        <input type="radio" name="investmentOption" value="realEstate">
+                        Real Estate
+                    </label><br>
+                    <label>
+                        <input type="radio" name="investmentOption" value="mutualFunds">
+                        Mutual Funds
+                    </label><br>
+                    <label>
+                        <input type="radio" name="investmentOption" value="cryptocurrency">
+                        Cryptocurrency
+                    </label><br>
+                </div>
+
+                <br><br>
+
+                <!-- Investment Goal Selection -->
+                <label for="investmentGoal">Investment Goal:</label>
+                <button type="button" onclick="toggleOptions('goalOptions')">&#62;</button>
+                <div id="goalOptions" class="options">
+                    <label>
+                        <input type="radio" name="investmentGoal" value="shortTerm" required>
+                        Short Term
+                    </label><br>
+                    <label>
+                        <input type="radio" name="investmentGoal" value="longTerm">
+                        Long Term
+                    </label><br>
+                </div>
+                
+                <br><br>
+
+ 
+
+            </fieldset>
+          </form>
+
+          <form >
+            <fieldset>
+                <legend>Financial Information</legend>
+                <label for="SOF">Source Of Funds:</label>
+                <input type="text" id="SOF" name="SOF" ><br><br>
+
+                <label for="NW">Net Worth:</label>
+                <input type="number" id="NW" name="NW" ><br><br>
+
+              <label for="AI">Annual Income:</label>
+              <input type="number" id="AI" name="AI" ><br><br>
+
+            </fieldset>
+          </form>
+
+           
+            <script>
+                function toggleOptions(id) {
+                    var options = document.getElementById(id);
+                    if (options.style.display === 'none') {
+                        options.style.display = 'block';
+                    } else {
+                        options.style.display = 'none';
+                    }
+                }
+
+                    function toggleOptions(id) {
+                        var options = document.getElementById(id);
+                        options.style.display = options.style.display === 'none' ? 'block' : 'none';
+                        }
+
+                function reviewRegistration() {
+
+                    // Retrieve personal details
+                    var fullName = document.getElementById('fname').value;
+                    var dob = document.getElementById('DoB').value;
+                    var nationality = document.getElementById('nation').value;
+                    var email = document.getElementById('email').value;
+                    var contact = document.getElementById('contact').value;
+                    var city = document.getElementById('cname').value;
+                    var street = document.getElementById('sname').value;
+                    var postalCode = document.getElementById('Pcode').value;
+                    
+
+
+                    // Retrieve investment options
+                    var investmentOption = document.querySelector('input[name="investmentOption"]:checked');
+                    var investmentGoal = document.querySelector('input[name="investmentGoal"]:checked');
+                    
+                    var investmentOptionText = investmentOption ? investmentOption.nextSibling.textContent.trim() : 'None selected';
+                    var investmentGoalText = investmentGoal ? investmentGoal.nextSibling.textContent.trim() : 'None selected';
+
+                    // Retrieve financial information
+                    var sourceoffunds = document.getElementById('SOF').value;
+                    var nw = document.getElementById('NW').value;
+                    var ai = document.getElementById('AI').value;
+                    
+                    // Populate review section
+                    document.getElementById('reviewFullName').textContent = fullName;
+                    document.getElementById('reviewDOB').textContent = dob;
+                    document.getElementById('reviewNationality').textContent = nationality;
+                    document.getElementById('reviewEmail').textContent = email;
+                    document.getElementById('reviewContact').textContent = contact;
+                    document.getElementById('reviewCity').textContent = city;
+                    document.getElementById('reviewStreet').textContent = street;
+                    document.getElementById('reviewPostalCode').textContent = postalCode;
+                    
+
+
+                    document.getElementById('reviewInvestmentOption').textContent = investmentOptionText;
+                    document.getElementById('reviewInvestmentGoal').textContent = investmentGoalText;
+
+                    document.getElementById('reviewSOF').textContent = sourceoffunds;
+                    document.getElementById('reviewNW').textContent = nw;
+                    document.getElementById('reviewAI').textContent = ai;
+
+                    document.getElementById('reviewSection').style.display = 'block';
+                }
+
+                function submitForm() {
+                    document.getElementById('investmentForm').submit();
+                }
+
+
+
+
+            </script>
+
+         <!-- Review and Submit Section -->
+                <button class="Formbutton" type="button" onclick="reviewRegistration()">Review and Submit</button>
+
+                    <div id="reviewSection" class="review-section">
+                        <h3>Review Information</h3>
+                        <p><strong>Full Name:</strong> <span id="reviewFullName">None provided</span></p>
+                        <p><strong>Date Of Birth:</strong> <span id="reviewDOB">None provided</span></p>
+                        <p><strong>Nationality:</strong> <span id="reviewNationality">None provided</span></p>
+                        <p><strong>Email:</strong> <span id="reviewEmail">None provided</span></p>
+                        <p><strong>Telephone:</strong> <span id="reviewContact">None provided</span></p>
+                        <p><strong>City:</strong> <span id="reviewCity">None provided</span></p>
+                        <p><strong>Street:</strong> <span id="reviewStreet">None provided</span></p>
+                        <p><strong>Postal Code:</strong> <span id="reviewPostalCode">None provided</span></p>
+                        <p><strong>Investment Option:</strong> <span id="reviewInvestmentOption">None selected</span></p>
+                        <p><strong>Investment Goal:</strong> <span id="reviewInvestmentGoal">None selected</span></p>
+                        <p><strong>Source Of Funds:</strong> <span id="reviewSOF">None provided</span></p>
+                        <p><strong>Net Worth:</strong> <span id="reviewNW">None provided</span></p>
+                        <p><strong>Annual Income:</strong> <span id="reviewAI">None provided</span></p>
+        
+        
+                        <button class="Formbutton" type="button" onclick="submitForm()">Finalize Registration</button>
+                    </div>
+
+        </form>
+    </body>
+</html>

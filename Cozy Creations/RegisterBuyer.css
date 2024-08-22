@@ -1,0 +1,145 @@
+h1{text-align: center;}
+h4{font-style: italic;color: F9CEBD;
+  font-size: x-large;}
+/*Style the body*/
+body{background-image: url("background1.png" )  ; 
+    background-size: cover;
+    text-align: center;
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    filter: brightness(80%);
+
+     }
+
+img{filter: drop-shadow(5);}     
+
+/* Style the label to display next to the inputs */
+label {
+    color: #F5F5DC;
+    padding: 12px 12px 12px 0;
+    font-weight: bold;
+    font-size: x-large;
+    margin-right: 2%;
+    vertical-align: middle;
+    height: 30px;
+    display: inline-block;
+    float: none;
+    clear: left;
+    width: 150px;
+    text-align: left
+    
+    }
+
+/*Styling the Inputs*/
+  input[type=text], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: F9CEBD;
+    display: inline-block;
+    float: none;
+  }
+
+  input[type=password], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #F9CEBD;
+  }
+  input[type= email], select, textarea{
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: #F9CEBD;
+  }
+  input[type=number] {
+    background-color:  #F9CEBD;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    width: 30%;
+    box-sizing: border-box;
+    resize: vertical;
+    
+    
+  }
+
+  .Regi button{
+    background-color: #E2725B ;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 45%;
+    height: 6.5%;
+    font-size: medium;
+    font-weight: bold;
+}
+
+section button{
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  font-weight:lighter;
+  height: 6.5%;
+}
+
+section button.log{
+    background-color: #E2725B ;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 45%;
+    
+    font-size: medium;
+    font-weight: bold;
+}
+
+input[type=button]{
+    background-color: E2725B ;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 45%;
+    height: 6.5%;
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 27%;
+    margin-right: 27%;
+  }
+    
+
+#message {
+    margin-top: 20px;
+    color: aliceblue;
+    font-weight: bold}
+
+    footer{
+      margin-top: 80px;
+      color:#E2725B;
+      background-color:aliceblue;
+      font-family:'Times New Roman', Times, serif;
+      width: 100%;
+      position: relative;
+      text-align:center;
+      align-items: normal;
+    }
+    footer img{
+      width: 25%;
+      position: relative;
+    }
+    
