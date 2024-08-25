@@ -1,65 +1,62 @@
-// Replace these with your actual API keys
-const WEATHER_API_KEY = 'f39ce3bd175c5424d6d04a08de0a2383';
-const GEOCODING_API_KEY = 'f39ce3bd175c5424d6d04a08de0a2383';
+// Replace with your OpenWeatherMap API key
+const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383';
 
-function updateTime() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    document.getElementById('time').innerHTML = `Current Time: ${timeString}`;
+function getWeatherData(lat, lon) {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => updateWeatherCard(data))
+        .catch(error => console.error('Error fetching weather data:', error));
 }
 
-// Check if Geolocation is available
-if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
+function updateWeatherCard(data) {
+    const locationElement = document.getElementById('location');
+    const dateElement = document.getElementById('date');
+    const tempElement = document.getElementById('temperature');
+    const sunElement = document.querySelector('.sun');
+    const cloudFront = document.querySelector('.cloud.front');
+    const cloudBack = document.querySelector('.cloud.back');
 
-        // Update time every second
-        setInterval(updateTime, 1000);
-        updateTime();
+    const location = `${data.name}, ${data.sys.country}`;
+    const temperature = `${Math.round(data.main.temp)}°`;
+    const weather = data.weather[0].main.toLowerCase();
 
-        // Google Maps Geocoding API URL
-        const geocodingApiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${GEOCODING_API_KEY}`;
+    locationElement.textContent = location;
+    dateElement.textContent = new Date().toLocaleDateString();
+    tempElement.textContent = temperature;
 
-        // Fetch location address
-        fetch(geocodingApiUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "OK") {
-                    const address = data.results[0].formatted_address;
-                    document.getElementById("location").innerHTML = `Location: ${address}`;
-                } else {
-                    document.getElementById("location").innerHTML = "Unable to retrieve address.";
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching location data:", error);
-                document.getElementById("location").innerHTML = "Failed to retrieve address.";
-            });
-
-        // Fetch weather data using OpenWeatherMap API
-        const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${WEATHER_API_KEY}`;
-
-        fetch(weatherApiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const temperature = data.main.temp;
-                const description = data.weather[0].description;
-                const iconCode = data.weather[0].icon;
-                const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
-                document.getElementById("weather").innerHTML = `<img src="${iconUrl}" alt="${description}" style="vertical-align:middle; margin-right:10px;">
-                Weather: ${temperature}°C, ${description}`;
-            })
-            .catch(error => {
-                console.error("Error fetching weather data:", error);
-                document.getElementById("weather").innerHTML = "Failed to fetch weather data.";
-            });
-
-    }, function(error) {
-        document.getElementById("location").innerHTML = "Unable to retrieve location.";
-        console.error("Error retrieving location:", error);
-    });
-} else {
-    document.getElementById("location").innerHTML = "Geolocation is not supported by your browser.";
+    // Update icons based on weather
+    if (weather.includes('cloud')) {
+        sunElement.style.display = 'none';
+        cloudFront.style.display = 'block';
+        cloudBack.style.display = 'block';
+    } else if (weather.includes('clear')) {
+        sunElement.style.display = 'block';
+        cloudFront.style.display = 'none';
+        cloudBack.style.display = 'none';
+    } else if (weather.includes('rain')) {
+        sunElement.style.display = 'none';
+        cloudFront.style.display = 'block';
+        cloudBack.style.display = 'block';
+        cloudFront.style.backgroundColor = '#9E9E9E';
+        cloudBack.style.backgroundColor = '#9E9E9E';
+    }
 }
+
+function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            getWeatherData(lat, lon);
+        }, error => {
+            console.error('Error getting location:', error);
+        });
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+}
+
+// Initialize the weather card
+getUserLocation();
