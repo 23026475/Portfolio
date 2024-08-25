@@ -4,23 +4,20 @@ body{
     background-color: #28282D;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-header{
-    padding: 20dp 10dp;
-}
 nav {
     display: flex;
     align-items: center;
-    background-color: #333;
     padding: 10px 20px;
-    position: fixed;
-    width: 100%;
+    position: relative;
+    width: 90%;
+    margin: auto;
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .navbar-links {
@@ -31,9 +28,14 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
-
+.navbar-links ul{
+    list-style: none;
+    
+    
+}
 .navbar-links li {
     margin: 0 15px;
+    display: inline-block;
 }
 
 .navbar-links li a {
@@ -44,15 +46,8 @@ nav {
 }
 
 .navbar-links li a:hover {
-    background-color: #A259FF;
+    color: #A259FF;
     border-radius: 5px;
-}
-#Weather {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 #location, #time, #weather {
