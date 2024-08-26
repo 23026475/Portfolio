@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #8B8B8B;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.navbar-links ul{
+    list-style: none;
+    
+    
+}
+.navbar-links li {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-links li a:hover {
+    color: #A259FF;
+    border-radius: 5px;
+}
+.navbar-links li .Projects a.active {
+    background-color: #04AA6D;
+    color: white;
+}
