@@ -64,9 +64,10 @@ nav {
 /* Styling for the left content */
 .leftContent, .rightContent {
     margin: auto auto;
-    width: 95%;
+    width: 97%;
     height: inherit;
-    border: solid 2px salmon;
+    border-right: solid 2px salmon;
+    
 }
 .leftContent{
     text-align: right;
@@ -74,12 +75,14 @@ nav {
 
 .skills {
     margin-top: 20px;
+    margin-right: 15px;
 }
 
 .skill h4 {
     cursor: pointer;
     padding: 10px;
     margin: 0;
+    font-weight: normal;
     
 }
 
@@ -111,9 +114,6 @@ button {
     box-shadow: 1px 3px 0px rgb(139, 113, 255);
     transition-duration: .3s;
   }
-hr{
-    border: solid 1px saddlebrown;
 
-}
 
 
