@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #28282D;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.navbar-links ul{
+    list-style: none;
+    
+    
+}
+.navbar-links li {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-links li a:hover {
+    color: #A259FF;
+    border-radius: 5px;
+}
+/* Container for the two divs */
+.contresumeContentainer {
+    display: grid;
+    grid-template-columns: repeat(1fr,2);
+    width: 80%;
+    max-width: 1000px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Styling for the left content */
+.leftContent, .rightContent {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* The white separator line */
+.separator {
+    width: 2px;
+    background-color: white;
+}
+
+
