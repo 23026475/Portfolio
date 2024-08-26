@@ -51,11 +51,10 @@ nav {
     border-radius: 5px;
 }
 /* Container for the two divs */
-.contresumeContentainer {
+.resumeContent {
     display: grid;
-    grid-template-columns: repeat(1fr,2);
-    width: 80%;
-    max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
     background-color: #333;
     color: white;
     border-radius: 8px;
@@ -64,15 +63,39 @@ nav {
 
 /* Styling for the left content */
 .leftContent, .rightContent {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
+
+    width: 100%;
+    border: solid 2px salmon;
 }
 
 /* The white separator line */
 .separator {
     width: 2px;
     background-color: white;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skill h4 {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+}
+
+.skill h4:hover {
+    background-color: #e0e0e0;
+}
+
+.skill div {
+    display: none; /* Hide the content by default */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #f9f9f9;
 }
 
 
