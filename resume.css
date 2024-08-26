@@ -65,8 +65,7 @@ nav {
 .leftContent, .rightContent {
     margin: auto auto;
     width: 97%;
-    height: inherit;
-    border-right: solid 2px salmon;
+    border-right: solid 4px white;
     
 }
 .leftContent{
@@ -83,11 +82,11 @@ nav {
     padding: 10px;
     margin: 0;
     font-weight: normal;
-    
+    color: yellow;
 }
 
 .skill h4:hover {
-    color: yellow;
+    color: white;
     text-decoration: underline;
 }
 
@@ -97,6 +96,45 @@ nav {
     border: 1px solid #ccc;
     border-top: none;
     background-color: #f9f9f9;
+}
+.Achivments{
+    padding: 10px;
+}
+.Achivments h3, div{
+    margin-right: 10px;
+}
+.achive  #year{
+    font-weight: bold;
+    color: #A259FF;
+}
+h2{
+    text-decoration: underline;
+}
+.rightContent{
+    height: 100%;
+    width: 100%;
+}
+.rightContent div{
+    padding-left: 5%;
+}
+.rightContent #year{
+    font-weight: bold;
+    color: #A259FF;
+}
+.rightContent #place{
+    color: white;
+    margin-left: 5px;
+}
+.rightContent #role, #attained{
+    color:yellow;
+    margin-left: 5px;
+}
+
+.Education div{
+    padding-left: 2%;
+}
+.leaderShow{
+    display: none;
 }
 button {
     width: 180px;
