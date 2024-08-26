@@ -83,9 +83,29 @@ nav {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 80%;
+    margin-top: 25px;
     margin: auto auto;
+}
+.offer h3{
+    color:#A259FF;
+}
+.offer p{
+    color: white;
 }
 .offer div{
     width: 40%;
     margin: auto auto;
+}
+.Skills h2{
+    text-align: center;
+    color: #A259FF;
+    font-size: x-large;
+    font-weight: bolder;
+    border: solid 5px #A259FF;
+    width: 250px;
+    margin: auto;
+    padding: 12px;
+}
+.skill{
+    width: 80%;
 }
