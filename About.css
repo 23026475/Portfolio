@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #8B8B8B;
+    background-color: #1a1a1a;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 nav {
@@ -15,9 +15,9 @@ nav {
     left: 0;
     z-index: 1000;
 }
-
-.logo img {
+.nav-logo img{
     height: 70px;
+    
 }
 
 .navbar-links {
@@ -27,6 +27,8 @@ nav {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+   
+
 }
 .navbar-links ul{
     list-style: none;
@@ -49,13 +51,23 @@ nav {
     color: #A259FF;
     border-radius: 5px;
 }
-.navbar-links li .Projects a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-.AboveMe{
+
+.AboutMe{
+    padding: 50px 0;
     width: 80%;
     margin: auto auto;
+    background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+  animation: move 4s linear infinite;
 }
 .AboutMeSquare{
     border: solid 5px #A259FF;
@@ -120,8 +132,15 @@ nav {
     display: flex;
     margin-top: 15px;
 }
+.logo img {
+    height: 70px;
+    
+
+}
 .logo{
     margin: 25px 25px;
     text-align: center;
+    color:white;
+    flex: 0 1 calc(40% - 8px);
 }
 
