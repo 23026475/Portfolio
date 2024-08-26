@@ -73,12 +73,6 @@ nav {
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
 
 h2 {
     text-align: center;
@@ -131,3 +125,27 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #218838;
 }
+.info{
+    border-left: solid 2px white ;
+    height: 75vh;
+    width: 70%;
+    margin: auto 25px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    gap:10px;
+}
+.info h4{
+    color: yellow;
+}
+.info p{
+    color:white;
+    margin-left: 20px;
+
+}
+.Myemail, .myContact, .mySocialMedia{
+    margin-left: 15px;
+    border-bottom:solid 2px white ;
+    border-left:solid 2px white ;
+    padding:25px;
+}
+.
