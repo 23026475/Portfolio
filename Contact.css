@@ -63,7 +63,7 @@ nav {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    border: solid 2px saddlebrown;
+    
 }
 .contact{
     border: solid 5ps black;
@@ -129,17 +129,14 @@ input[type="submit"]:hover {
     background-color: #218838;
 }
 .info{
-    border-left: solid 2px white ;
-    border: solid 2px saddlebrown;
+    
     height: 95vh;
-   
     width: 70%;
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     grid-template-rows: repeat(3,1fr);
-    gap:10px;
 }
 
 .info legend{
@@ -152,7 +149,5 @@ input[type="submit"]:hover {
     
 }
 .Myemail, .myContact, .mySocialMedia{
-    margin-left: 15px;
-    border:solid 2px white ;
-    padding:15px;
+
 }
