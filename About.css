@@ -110,6 +110,9 @@ nav {
 }
 .Skills{
     margin-top: 50px;
+    width: 100%;
+    height: 100%;
+  
 }
 .Skills h2{
     text-align: center;
@@ -123,10 +126,23 @@ nav {
 }
 .skill{
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
+    padding: 35px 15px;
+    background-color: #111111;
+  background-image: linear-gradient(
+    32deg,
+    rgba(8, 8, 8, 0.74) 30px,
+    transparent
+  );
+  background-size: 60px 60px;
+  background-position: -5px -5px;
 }
 .skill h3{
     color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: larger;
 }
 .logos{
     display: flex;
