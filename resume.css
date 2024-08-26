@@ -68,26 +68,20 @@ nav {
     border: solid 2px salmon;
 }
 
-/* The white separator line */
-.separator {
-    width: 2px;
-    background-color: white;
-}
-
 .skills {
     margin-top: 20px;
 }
 
 .skill h4 {
     cursor: pointer;
-    background-color: #f4f4f4;
     padding: 10px;
     margin: 0;
-    border: 1px solid #ccc;
+    
 }
 
 .skill h4:hover {
-    background-color: #e0e0e0;
+    color: yellow;
+    text-decoration: underline;
 }
 
 .skill div {
