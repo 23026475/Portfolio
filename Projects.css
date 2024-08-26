@@ -112,32 +112,31 @@ nav {
 .card {
     position: relative;
     display: grid;
-    height: 60%;
+    height: 55vh;
     width: 90%;
-    margin: auto;
+    margin: 25px 0 75px 100px;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 5vh;
     background-color: #D9D9D9;
 }
 .siteImage img{
-    width: 100%;
-    right:-10%;
+    width: 80%;
+    height: 60vh;
+    margin-left: 50px; 
+    transform: translateY(-50px);
 }
-..siteDescription {
-    width: 300px;           /* Set the width of the container */
-    height: 200px;          /* Set a fixed height */
-    padding: 10px;          /* Add some padding inside the container */
-    background-color: #fff; /* Set background color */
-    border: 1px solid #ccc; /* Optional border */
-    overflow-y: auto;       /* Enable vertical scrolling */
+.siteDescription {
+    width: 80%;          
+    height: 40vh;          
+    padding: 10px; 
+    margin: 15px auto;        
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    overflow-y: auto;       
 }
-
-/* Optional styles for the content */
-.siteDescription h2 {
-    margin-top: 0;
-}
-
 .siteDescription p {
     margin-bottom: 10px;
     line-height: 1.5;
+}
+.siteDescription button{
+    
 }
