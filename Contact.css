@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #8B8B8B;
+    background-color: #28282D;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 nav {
@@ -57,10 +57,13 @@ nav {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     width: 100%;
+    margin-top: 50px;
 }
 .mail{
-    width: 80%;
-    margin: auto auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px saddlebrown;
 }
 .contact{
     border: solid 5ps black;
@@ -76,7 +79,7 @@ nav {
 
 h2 {
     text-align: center;
-    color: #333;
+    color: white;
 }
 
 form {
@@ -127,25 +130,29 @@ input[type="submit"]:hover {
 }
 .info{
     border-left: solid 2px white ;
-    height: 75vh;
+    border: solid 2px saddlebrown;
+    height: 95vh;
+   
     width: 70%;
-    margin: auto 25px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-rows: repeat(3,1fr);
     gap:10px;
 }
-.info h4{
+
+.info legend{
     color: yellow;
 }
 .info p{
     color:white;
     margin-left: 20px;
-
+    font-size: larger;
+    
 }
 .Myemail, .myContact, .mySocialMedia{
     margin-left: 15px;
-    border-bottom:solid 2px white ;
-    border-left:solid 2px white ;
-    padding:25px;
+    border:solid 2px white ;
+    padding:15px;
 }
-.
