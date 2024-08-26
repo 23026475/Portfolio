@@ -97,11 +97,18 @@ nav {
 }
 
 .text p{
-    font-size: 35px;
+    font-size: 25px;
     margin: 0;
+}
+.text #thisIt{
+    font-weight: lighter;
+    font-size: 30px;
+    margin: auto;
+    color: yellow;
 }
 .text h2{
     margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: 500;
     font-style: Montserrat;
     font-size: 55px;
@@ -117,6 +124,7 @@ nav {
     font-size: 1.2em;
     font-weight: 550;
     font-family: 'Montserrat', sans-serif;
+    margin-top: 25px;
   }
   
   .text button:hover {
@@ -127,7 +135,7 @@ nav {
 
 
 .myImage img{
-    width: 65%;
+    width: 85%;
     height: 80%;
     margin: auto;
 }
