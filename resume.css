@@ -63,9 +63,13 @@ nav {
 
 /* Styling for the left content */
 .leftContent, .rightContent {
-
-    width: 100%;
+    margin: auto auto;
+    width: 95%;
+    height: inherit;
     border: solid 2px salmon;
+}
+.leftContent{
+    text-align: right;
 }
 
 .skills {
@@ -90,6 +94,10 @@ nav {
     border: 1px solid #ccc;
     border-top: none;
     background-color: #f9f9f9;
+}
+hr{
+    border: solid 1px saddlebrown;
+    
 }
 
 
