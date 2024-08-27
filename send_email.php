@@ -12,11 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Set the recipient email address.
-    $to = 'your-email@example.com'; // Replace with your email address
+
+    $to = 'ndivhuswiswi@gmail.com'; 
 
     // Set the email subject.
-    $subject = 'New Contact Form Submission';
+    $subject = 'Portfolio Contact Form Submission';
 
     // Build the email content.
     $email_content = "Name: $name\n";
@@ -36,8 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Oops! Something went wrong and we couldn't send your message.";
     }
 } else {
-    // If the form is not submitted via POST, redirect back to the form page
-    header("Location: contact_form_page.html"); // Replace with your form page URL
+    header("Location: Contact.html"); 
     exit;
 }
 ?>
