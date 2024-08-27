@@ -33,22 +33,20 @@ nav {
 .navbar-links ul{
     list-style: none;
     
-    
 }
-.navbar-links li {
+.navbar-links ul li {
     margin: 0 15px;
     display: inline-block;
 }
 
-.navbar-links li a {
+.navbar-links ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
 }
-.nav-link ul li a.active {
+.nav-link ul li .links .active {
     color: yellow;
-    background-color: #007bff;
     border-radius: 4px;
 }
 
@@ -90,7 +88,7 @@ nav {
     padding: 10px;
     margin: 0;
     font-weight: normal;
-    color: yellow;
+    color: #F7DF1E;
 }
 
 .skill h4:hover {
@@ -134,7 +132,7 @@ h2{
     margin-left: 5px;
 }
 .rightContent #role, #attained{
-    color:yellow;
+    color: #F7DF1E;
     margin-left: 5px;
 }
 
@@ -172,7 +170,7 @@ h2{
   }
 
   .downloadables .Certifications{
-    background-color: yellow;
+    background-color: #F7DF1E;
   }
 
 footer {
