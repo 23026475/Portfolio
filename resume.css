@@ -181,7 +181,12 @@ footer {
     flex: 1;
     text-align: center;
 }
-
+.footer-left, .footer-right{
+    padding-top: 15vh;
+}
+.footer-left #time{
+    margin-top: 12px;
+}
 .footer-center {
     text-align: center;
 }
