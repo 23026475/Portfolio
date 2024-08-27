@@ -159,4 +159,65 @@ nav {
     color:white;
     flex: 0 1 calc(40% - 8px);
 }
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height:25vh;
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+.footer-left, .footer-right{
+    padding-top: 15vh;
+}
+.footer-left #time{
+    margin-top: 12px;
+}
+.footer-center {
+    text-align: center;
+}
+.toTop{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 15px;
+}
+.toTop img{
+    width: 25px;
+    height: 25px;
+}
+
+.footerMid{
+    display: inline;
+
+}
+.footerMid img{
+    width: 35px;
+    height: 35px;
+    margin: 3px 3px;
+}
+.footerMid img:hover{
+    width: 50px;
+    height: 50px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
 

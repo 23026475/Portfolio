@@ -29,6 +29,7 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
+
 .navbar-links ul{
     list-style: none;
     
@@ -45,6 +46,11 @@ nav {
     padding: 10px 15px;
     display: block;
 }
+.nav-link ul li a.active {
+    color: yellow;
+    background-color: #007bff;
+    border-radius: 4px;
+}
 
 .navbar-links li a:hover {
     color: #A259FF;
@@ -54,7 +60,8 @@ nav {
 .resumeContent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    width: 90%;
+    margin: auto auto;
     background-color: #333;
     color: white;
     border-radius: 8px;
