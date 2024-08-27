@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="index.css">
         <title>N . Neswiswi-Home</title>
         <link rel="icon" type="image/png" sizes="16x16" href="Screenshot_2024-08-19_140100-removebg-preview.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
     </head>
     <body>
         <header>
@@ -26,11 +28,25 @@
         <div class="background"></div>
         <div class="InText">
             <div class="text">
-                <p>Hi, I am</p>
-                <h2>Ndivhuwo Neswiswi</h2>
-                
-                <p id="thisIt">UX DESIGNER | WEB DEVELOPMENT</p>
-                <button>Contact Me</button>
+                <div class="upperText">
+                    <p>Hi, I am</p>
+                    <h2>Ndivhuwo Neswiswi</h2>
+                    
+                    <p id="thisIt">UX DESIGNER | WEB DEVELOPMENT</p>
+                    <button>Contact Me</button>
+                </div>
+                <div class="weather">
+                    <div class="location-time-weather">
+                        <div id="location"></div>
+                        <div id="weather">
+                            <i id="weather-icon" class="wi"></i> 
+                            <span id="weather-description"></span>
+                        </div>
+                        <div id="time"></div>
+                    </div>
+                    
+                </div>
+
             </div>
             <div class="myImage">
                 <img src="Screenshot_2024-08-25_200306-removebg-preview.png" alt="my picture">
