@@ -156,37 +156,62 @@ nav {
 
   /* Footer styling */
   footer {
-    background-color: #333;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height:25vh;
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+.footer-left, .footer-right{
+    padding-top: 15vh;
+}
+.footer-left #time{
+    margin-top: 12px;
+}
+.footer-center {
+    text-align: center;
+}
+.toTop{
     display: grid;
-    height: 30vh;
-    grid-template-columns: repeat(3,1fr);
-    padding: 20px;
-    text-align:left;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 15px;
+}
+.toTop img{
+    width: 25px;
+    height: 25px;
 }
 
-/* Individual section styling */
-.footerLeft, .footoerMid, .footerRight {
-    width: 95%; /* Each section takes up about a third of the footer's width */
+.footerMid{
+    display: inline;
+
+}
+.footerMid img{
+    width: 35px;
+    height: 35px;
+    margin: 3px 3px;
+}
+.footerMid img:hover{
+    width: 50px;
+    height: 50px;
 }
 
-
-/* List and link styling in the middle section */
-.footoerMid {
-    list-style-type: none;
-    padding: 0;
+.footer-right {
+    text-align: right;
 }
 
-.footoerMid ul li {
-    margin: 5px 0;
-}
-
-.footoerMid ul li a {
-    color: white;
+footer a {
+    color: #fff;
     text-decoration: none;
+    margin: 0 10px;
 }
 
-.footoerMid ul li a:hover {
+footer a:hover {
     text-decoration: underline;
 }
 

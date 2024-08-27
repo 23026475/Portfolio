@@ -13,10 +13,10 @@
                 </div>
                 <div class="navbar-links">
                     <ul>
-                        <li><a href="#About">About</a></li>
-                        <li><a class="Projects" href="#Projects">Projects</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                        <li><a href="#Resume">Resume</a></li>
+                        <li><a href="About.html" class="links">About</a></li>
+                        <li><a href="Projects.html" class="links">Projects</a></li>
+                        <li><a href="Contact.html" class="links active">Contact</a></li>
+                        <li><a href="resume.html" class="links">Resume</a></li>
                     </ul>
                 </div>
             </nav>
@@ -77,23 +77,30 @@
         <!------------------------------------------Footer-------------------------------------------->
 
         <footer>
-            <div class="footerLeft">
-                <div id="location">Fetching location...</div>
-            
+            <div class="footer-left">
+                <span id="location">Location: Loading...</span><br>
+                <span id="time">Time: Loading...</span>
             </div>
-            <div class="footerMid">
-                
-                <button>Back to top</button>
-                <div class="footericons">
-
+            <div class="footer-center">
+                <br>
+                <div class="toTop">
+                    
+                    <a href="#top"><img src="icons8-up-squared-50.png" alt="up square"></a>
+                    <a href="#top">Back to Top</a>
                 </div>
-                <p>@2020 Tomasz Gajda All Rights Reserved.</p>
-                
+                <div class="footerMid">
+                    <a href="www.linkedin.com/in/ndivhuwo-neswiswi-163b55311"><img src="icons8-linked-in-94.png" alt="linkedin"></a>
+                    <a href="https://github.com/23026475"><img src="icons8-github-logo-94.png" alt="github"></a>
+                </div>
+                <p><b>@2024 Ndivhuwo</b><br>
+                    All Rights Reserved.</p>
             </div>
-            <div class="footerRight">
-                <div id="time">Fetching time...</div>
-                <div id="weather">Fetching weather updates...</div>
+            <div class="footer-right">
+                <span id="weather">Weather: Loading...</span>
+                <img id="weather-icon" src="" alt="Weather Icon">
             </div>
         </footer>
+
+        <script src="index.js"></script>
     </body>
 </html>
