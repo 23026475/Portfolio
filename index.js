@@ -47,3 +47,4 @@ function updateWeather(lat, lon) {
 
 updateLocationAndTime();
 
+

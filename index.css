@@ -63,7 +63,7 @@ nav {
     content: '';
     position: absolute;
     width: 115%;  /* Rectangle width */
-    height: 550px; /* Rectangle height */
+    height: 80%; /* Rectangle height */
     background-color: #D9D9D9; /* Blue color for the first rectangle */
     z-index: -1;  /* Make sure it's behind other content */
 }
@@ -206,3 +206,23 @@ nav {
     height: 80%;
     margin: auto;
 }
+
+@media (max-width: 480px) {
+    /* Styles for small devices */
+    nav{
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Styles for medium devices */
+    
+}
+
+@media (min-width: 769px) and (max-width: 1650px) {
+    /* Styles for large and extra-large devices */
+    .navbar-links li a {
+        font-size: 20px;
+    }
+}
+
