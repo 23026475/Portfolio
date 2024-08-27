@@ -40,11 +40,15 @@ nav {
     display: inline-block;
 }
 
-.navbar-links li a {
+.navbar-links ul li .links {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
+}
+.navbar-link ul li .links .active {
+    color: yellow;
+    border-radius: 4px;
 }
 
 .navbar-links li a:hover {

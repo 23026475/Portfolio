@@ -5,12 +5,11 @@ function updateLocationAndTime() {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
 
-            // Example API call to get location name (replace with actual API)
             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('location').innerText = `Location: ${data.city}, ${data.countryName}`;
-                    updateWeather(lat, lon);  // Update weather using the fetched latitude and longitude
+                    updateWeather(lat, lon);  
                 })
                 .catch(error => console.error('Error fetching location data:', error));
 
@@ -30,7 +29,7 @@ function updateLocationAndTime() {
 
 // Function to get and display weather data
 function updateWeather(lat, lon) {
-    const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383'; // Replace with your actual API key
+    const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383'; //api key
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`)
         .then(response => {
@@ -46,6 +45,5 @@ function updateWeather(lat, lon) {
         .catch(error => console.error('Error fetching weather data:', error));
 }
 
-// Initialize functions
 updateLocationAndTime();
 
