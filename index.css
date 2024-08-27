@@ -139,6 +139,10 @@ nav {
     font-size: 1.5em;
   }
 
+  #location{
+    color: white;
+  }
+
 .location-time-weather {
     margin-left: 50px;
     margin-top: 80px;
@@ -147,8 +151,7 @@ nav {
     font-weight: 500;
 }
 .location-time-weather div{
-    margin: 25px 15px;
-    border: solid 2px gold;
+    margin: 5px 5px;
 }
 #weather-icon {
     font-size: 48px;
@@ -156,8 +159,8 @@ nav {
 }
 
 #weather-description {
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 18px;
+    color: white;
 }
 #temperature-toggle {
     margin-top: 10px;
@@ -176,10 +179,26 @@ nav {
 }
 
 #temperature-toggle button:focus {
-    outline: none;
+    outline: none;width: 20px;
+    height: 20px;
     background-color: #bbb;
 }
-
+.weather_time{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    
+}
+#weather{
+    border-right: solid 3px white;
+}
+#time{
+    font-size: 18px;
+    padding-top: 25px;
+    color: white;
+}
 
 
 .myImage img{
