@@ -168,3 +168,35 @@ h2{
     background-color: yellow;
   }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height:25vh;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+

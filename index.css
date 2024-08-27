@@ -148,7 +148,10 @@ nav {
 }
 .location-time-weather div{
     margin: 25px 15px;
-    border: solid 2pc gold;
+    border: solid 2px gold;
+}
+.weather_time{
+    
 }
 #weather-icon {
     font-size: 48px;
@@ -158,6 +161,26 @@ nav {
 #weather-description {
     font-size: 16px;
     margin-left: 10px;
+}
+#temperature-toggle {
+    margin-top: 10px;
+}
+
+#temperature-toggle button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#temperature-toggle button:hover {
+    background-color: #ddd;
+}
+
+#temperature-toggle button:focus {
+    outline: none;
+    background-color: #bbb;
 }
 
 
