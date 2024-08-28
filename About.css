@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
 }
 nav {
     display: flex;
@@ -76,7 +76,7 @@ nav {
 .AboutMeSquare{
     border: solid 5px #A259FF;
     width: 250px;
-    margin: auto;
+    margin: 35px auto;
 }
 .AboutMeSquare p{
     text-align: center;
@@ -115,7 +115,7 @@ nav {
 .Skills{
     margin-top: 50px;
     width: 100%;
-    height: 100%;
+    height: max-content;
   
 }
 .Skills h2{
@@ -125,21 +125,22 @@ nav {
     font-weight: bolder;
     border: solid 5px yellow;
     width: 250px;
-    margin: auto;
+    margin: 35px auto;
     padding: 12px;
 }
 .skill{
     width: 80%;
+    height:35vh;
     margin: 20px auto;
     padding: 35px 15px;
     background-color: #111111;
-  background-image: linear-gradient(
-    32deg,
-    rgba(8, 8, 8, 0.74) 30px,
-    transparent
-  );
-  background-size: 60px 60px;
-  background-position: -5px -5px;
+    background-image: linear-gradient(
+        32deg,
+        rgba(8, 8, 8, 0.74) 30px,
+        transparent
+      );
+      background-size: 60px 60px;
+      background-position: -5px -5px;
 }
 .skill h3{
     color: white;
@@ -151,6 +152,7 @@ nav {
 .logos{
     display: flex;
     margin-top: 15px;
+    height: 35vh;
 }
 .logo img {
     height: 70px;
@@ -167,17 +169,20 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    width: 100%;
     height:25vh;
     background-color: #1A1A1A;
     color: #fff;
+    
 }
 
 .footer-left, .footer-center, .footer-right {
     flex: 1;
     text-align: center;
 }
-.footer-left, .footer-right{
-    padding-top: 15vh;
+.footer-left{
+    padding-top: 10vh;
+    border: solid 1px green;
 }
 .footer-left #time{
     margin-top: 12px;
@@ -210,7 +215,8 @@ footer {
 }
 
 .footer-right {
-    text-align: right;
+    padding-top: 5vh;
+    border: solid 1px green;
 }
 
 footer a {
