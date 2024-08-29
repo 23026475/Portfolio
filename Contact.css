@@ -71,13 +71,7 @@ nav {
     font-size: 24px;
     margin-bottom: 20px;
 }
-.mail {
-    width: 60%;
-}
 
-.info {
-    width: 35%;
-}
 
 .mail, .info {
     flex: 1;

@@ -139,6 +139,35 @@ nav {
     overflow-y: auto;
 }
 
+/* Hide overflow text by default */
+.siteDescription .description {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* Style for the Read More button */
+.read-more-btn {
+    border: none; /* Remove button border */
+    background: none; /* Remove button background */
+    color: #007bff; /* Button text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor pointer on hover */
+    text-decoration: underline; /* Underline to mimic a link */
+    padding: 0; /* Remove default button padding */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* When expanded */
+.siteDescription.expanded .description {
+    max-height: 500px; /* Adjust this height according to your content */
+}
+
+.siteDescription.expanded .read-more-btn::after {
+    content: "Show Less";
+}
+
+
 .siteDescription p {
     margin-bottom: 10px;
     line-height: 1.5;
@@ -243,7 +272,7 @@ footer a:hover {
     }
 
     .card {
-        margin: 25px 0 75px 25px;
+        margin: 25px auto;
         grid-template-columns: 1fr; /* Stack columns on smaller screens */
     }
 
@@ -286,7 +315,7 @@ footer a:hover {
     }
 
     .card {
-        margin: 25px 0;
+        margin: 25px 50px;
         grid-template-columns: 1fr;
     }
 
