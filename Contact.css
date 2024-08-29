@@ -61,21 +61,39 @@ nav {
     margin: 50px auto;
     padding: 20px;
     max-width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(
+        135deg,
+        #121212 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #121212 50%,
+        #121212 75%,
+        #1a1a1a 75%,
+        #1a1a1a
+    );
+    background-size: 40px 40px;
     border-radius: 8px;
 }
 
 .contact h2 {
     text-align: center;
-    color: #333;
-    font-size: 24px;
+    color: white;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
 
-.mail, .info {
-    flex: 1;
+.mail {
+    flex: 1.25;
+    margin: 20px;
+}
+.line{
+    margin: 25px;
+    flex: 0.01;
+    background-color: #fff;
+}
+.info{
+    flex: 0.74;
     margin: 20px;
 }
 
@@ -94,6 +112,7 @@ nav {
 .mail input[type="email"],
 .mail textarea {
     width: 100%;
+    height: 40px;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -169,7 +188,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    height:25vh;
+    height:35vh;
     background-color: #1A1A1A;
     color: #fff;
 }
