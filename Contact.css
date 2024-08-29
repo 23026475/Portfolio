@@ -47,7 +47,7 @@ nav {
 }
 
 .navbar-links li a:hover {
-    color: #A259FF;
+    color: yellow;
     border-radius: 5px;
 }
 .navbar-links li .Projects a.active {
@@ -61,17 +61,7 @@ nav {
     margin: 50px auto;
     padding: 20px;
     max-width: 1200px;
-    background: linear-gradient(
-        135deg,
-        #121212 25%,
-        #1a1a1a 25%,
-        #1a1a1a 50%,
-        #121212 50%,
-        #121212 75%,
-        #1a1a1a 75%,
-        #1a1a1a
-    );
-    background-size: 40px 40px;
+    background-color: #333;
     border-radius: 8px;
 }
 

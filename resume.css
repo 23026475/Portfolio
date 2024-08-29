@@ -52,7 +52,7 @@ nav {
 }
 
 .navbar-links li a:hover {
-    color: #A259FF;
+    color: yellow;
     border-radius: 5px;
 }
 /* Container for the two divs */
