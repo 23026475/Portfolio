@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Remember its open weather
+    // API Key and Base URL for weather
     const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383';
     const apiBaseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
@@ -14,10 +14,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const footerTimeElement = document.querySelector('.footer-left #time');
     const footerWeatherElement = document.querySelector('.footer-right #weather');
 
+    // Function to fetch city and country using ipinfo.io
+    function fetchLocation() {
+        return fetch('https://ipinfo.io/json?token=YOUR_IPINFO_TOKEN')
+            .then(response => response.json())
+            .then(data => {
+                const city = data.city;
+                const country = data.country;
+                return { city, country };
+            })
+            .catch(error => {
+                console.error('Error fetching location data:', error);
+                return { city: 'Unknown', country: 'Unknown' };
+            });
+    }
+
     // Function to update weather and time
-    function updateWeatherAndTime(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
+    function updateWeatherAndTime(lat, lon, city, country) {
         const url = `${apiBaseUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         fetch(url)
@@ -25,16 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 const weatherDescription = data.weather[0].description;
                 const temperature = data.main.temp;
-                const city = data.name;
-                const region = data.sys.country; // Assuming country as the region
 
                 // Update Body
-                bodyLocationElement.textContent = `${city}, ${region}`;
+                bodyLocationElement.innerText = `Location: ${city}, ${country}`;
                 bodyWeatherDescriptionElement.textContent = `${weatherDescription} - ${temperature}°C`;
                 bodyWeatherIconElement.className = `wi wi-owm-${data.weather[0].id}`;
 
                 // Update Footer
-                footerLocationElement.textContent = `Location: ${city}, ${region}`;
+                footerLocationElement.innerText = `Location: ${city}, ${country}`;
                 footerWeatherElement.textContent = `Weather: ${weatherDescription} - ${temperature}°C`;
             })
             .catch(error => console.error('Error fetching weather data:', error));
@@ -47,12 +58,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Get user's location
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(updateWeatherAndTime, function (error) {
-            console.error('Error getting location:', error);
-            // Fallback content if location access is denied
-            bodyLocationElement.textContent = 'Location: Unavailable';
-            footerLocationElement.textContent = 'Location: Unavailable';
-        });
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+
+                // Fetch city and country, then update weather and time
+                fetchLocation().then(({ city, country }) => {
+                    updateWeatherAndTime(lat, lon, city, country);
+                });
+            },
+            function (error) {
+                console.error('Error getting location:', error);
+                // Fallback content if location access is denied
+                bodyLocationElement.innerText = 'Location: Unavailable';
+                footerLocationElement.innerText = 'Location: Unavailable';
+            }
+        );
     } else {
         console.error('Geolocation is not supported by this browser.');
     }
@@ -64,3 +86,4 @@ document.addEventListener('DOMContentLoaded', function () {
         footerTimeElement.textContent = `Time: ${currentTime}`;
     }, 60000);
 });
+

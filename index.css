@@ -281,12 +281,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 480px) {
-    /* Styles for small devices */
-    nav{
-
-    }
-}
 
 @media (min-width: 481px) and (max-width: 768px) {
     /* Styles for medium devices */
