@@ -17,7 +17,7 @@ nav {
     z-index: 1000;
 }
 
-.logo img {
+.nav-logo img {
     height: 70px;
 }
 
@@ -29,17 +29,17 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
-.navbar-links ul{
-    list-style: none;
-    
-    
+.navbar-links a.active {
+    color: yellow;
+    border-radius: 5px;
 }
+
 .navbar-links li {
     margin: 0 15px;
     display: inline-block;
 }
 
-.navbar-links li a {
+.navbar-links ul li .links {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -47,7 +47,7 @@ nav {
 }
 
 .navbar-links li a:hover {
-    color: #A259FF;
+    color: yellow;
     border-radius: 5px;
 }
 .background {
@@ -55,7 +55,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 130%;
     overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ nav {
     content: '';
     position: absolute;
     width: 115%;  /* Rectangle width */
-    height: 80%; /* Rectangle height */
+    height: 90%; /* Rectangle height */
     background-color: #D9D9D9; /* Blue color for the first rectangle */
     z-index: -1;  /* Make sure it's behind other content */
 }
@@ -144,9 +144,14 @@ nav {
     color: white;
   }
 
+  .Weather{
+    height: fit-content;
+    width: 100%;
+  }
+
 .location-time-weather {
     margin-left: 50px;
-    margin-top: 80px;
+    margin-top: 40px;
     color:black;
     font-size: x-large;
     font-weight: 500;
@@ -203,9 +208,77 @@ nav {
 
 
 .myImage img{
-    width: 85%;
-    height: 80%;
+    width: 75%;
+    height: 70%;
     margin: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 35vh;
+    background-color: #2a2a2a;
+    color: #fff;
+    margin-top: 35px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    padding-top: 10vh;
+}
+
+.footer-left #time {
+    margin-top: 12px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.toTop {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 15px;
+}
+
+.toTop img {
+    width: 25px;
+    height: 25px;
+}
+
+.footerMid {
+    display: inline;
+}
+
+.footerMid img {
+    width: 35px;
+    height: 35px;
+    margin: 3px 3px;
+}
+
+.footerMid img:hover {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-right {
+    padding-top: 7vh;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 480px) {
