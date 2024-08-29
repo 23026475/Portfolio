@@ -118,7 +118,7 @@ nav {
     width: 90%;
     margin: 25px 0 75px 100px;
     grid-template-columns: repeat(2, 1fr);
-    background-color: #D9D9D9;
+    background-color: #333;
 }
 
 .siteImage img {

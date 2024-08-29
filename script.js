@@ -1,83 +1,66 @@
-let currentUnit = 'metric';  // Default to Celsius
-let currentTempCelsius = null;
+document.addEventListener('DOMContentLoaded', function () {
+    // Remember its open weather
+    const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383';
+    const apiBaseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
-async function getLocation() {
-    const apiKey = '60ea2247acdb4bae8fbbf7883ef5e95f'; // Replace with your ipgeolocation.io API key
-    try {
-        const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        const region = data.state_prov;
-        const city = data.city;
-        const country = data.country_name;
-        document.getElementById('location').textContent = `${city}, ${region}, ${country}`;
-        return { latitude: data.latitude, longitude: data.longitude };
-    } catch (error) {
-        console.error('Failed to fetch location data:', error);
+    // Elements in Body
+    const bodyLocationElement = document.getElementById('location');
+    const bodyWeatherIconElement = document.getElementById('weather-icon');
+    const bodyWeatherDescriptionElement = document.getElementById('weather-description');
+    const bodyTimeElement = document.getElementById('time');
+
+    // Elements in Footer
+    const footerLocationElement = document.querySelector('.footer-left #location');
+    const footerTimeElement = document.querySelector('.footer-left #time');
+    const footerWeatherElement = document.querySelector('.footer-right #weather');
+
+    // Function to update weather and time
+    function updateWeatherAndTime(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const url = `${apiBaseUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const weatherDescription = data.weather[0].description;
+                const temperature = data.main.temp;
+                const city = data.name;
+                const region = data.sys.country; // Assuming country as the region
+
+                // Update Body
+                bodyLocationElement.textContent = `${city}, ${region}`;
+                bodyWeatherDescriptionElement.textContent = `${weatherDescription} - ${temperature}°C`;
+                bodyWeatherIconElement.className = `wi wi-owm-${data.weather[0].id}`;
+
+                // Update Footer
+                footerLocationElement.textContent = `Location: ${city}, ${region}`;
+                footerWeatherElement.textContent = `Weather: ${weatherDescription} - ${temperature}°C`;
+            })
+            .catch(error => console.error('Error fetching weather data:', error));
+
+        // Update Time
+        const currentTime = new Date().toLocaleTimeString();
+        bodyTimeElement.textContent = currentTime;
+        footerTimeElement.textContent = `Time: ${currentTime}`;
     }
-}
 
-function displayTime() {
-    const now = new Date();
-    document.getElementById('time').textContent = now.toLocaleTimeString();
-}
-
-function getWeatherIcon(weatherId) {
-    if (weatherId >= 200 && weatherId < 300) return 'wi-thunderstorm';
-    if (weatherId >= 300 && weatherId < 500) return 'wi-sprinkle';
-    if (weatherId >= 500 && weatherId < 600) return 'wi-rain';
-    if (weatherId >= 600 && weatherId < 700) return 'wi-snow';
-    if (weatherId >= 700 && weatherId < 800) return 'wi-fog';
-    if (weatherId === 800) return 'wi-day-sunny';
-    if (weatherId > 800 && weatherId < 900) return 'wi-cloudy';
-    return 'wi-na'; // default icon if no match
-}
-
-async function getWeather(lat, lon) {
-    const apiKey = 'f39ce3bd175c5424d6d04a08de0a2383';  // Replace with your OpenWeatherMap API key
-    try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${currentUnit}&appid=${apiKey}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        const weatherId = data.weather[0].id;  // Get weather condition ID
-        const weatherDescription = data.weather[0].description;
-        const temperature = data.main.temp;
-
-        currentTempCelsius = currentUnit === 'metric' ? temperature : (temperature - 32) * 5 / 9;
-
-        const weatherIconClass = getWeatherIcon(weatherId);
-        document.getElementById('weather-icon').className = `wi ${weatherIconClass}`;
-
-        document.getElementById('weather-description').textContent = `${weatherDescription}, ${temperature.toFixed(1)}°${currentUnit === 'metric' ? 'C' : 'F'}`;
-    } catch (error) {
-        console.error('Failed to fetch weather data:', error);
+    // Get user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(updateWeatherAndTime, function (error) {
+            console.error('Error getting location:', error);
+            // Fallback content if location access is denied
+            bodyLocationElement.textContent = 'Location: Unavailable';
+            footerLocationElement.textContent = 'Location: Unavailable';
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
     }
-}
 
-function toggleTemperatureUnit(unit) {
-    currentUnit = unit;
-    const temperature = currentUnit === 'metric' ? currentTempCelsius : currentTempCelsius * 9 / 5 + 32;
-    const unitSymbol = currentUnit === 'metric' ? 'C' : 'F';
-    document.getElementById('weather-description').textContent = `${document.getElementById('weather-description').textContent.split(',')[0]}, ${temperature.toFixed(1)}°${unitSymbol}`;
-}
-
-document.getElementById('celsius').addEventListener('click', () => {
-    if (currentUnit !== 'metric') toggleTemperatureUnit('metric');
+    // Optional: Update time every minute
+    setInterval(() => {
+        const currentTime = new Date().toLocaleTimeString();
+        bodyTimeElement.textContent = currentTime;
+        footerTimeElement.textContent = `Time: ${currentTime}`;
+    }, 60000);
 });
-
-document.getElementById('fahrenheit').addEventListener('click', () => {
-    if (currentUnit !== 'imperial') toggleTemperatureUnit('imperial');
-});
-
-async function init() {
-    const location = await getLocation();
-    getWeather(location.latitude, location.longitude);
-    displayTime();
-    setInterval(displayTime, 1000); // Update time every second
-}
-
-window.onload = init;
