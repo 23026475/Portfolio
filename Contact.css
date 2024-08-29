@@ -59,726 +59,84 @@ nav {
     width: 100%;
     margin-top: 50px;
 }
-
-You said:
-make the following responsive: body{
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
-}
-nav {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    width: 90%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-.nav-logo img{
-    height: 70px;
+.mail{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
     
 }
-
-.navbar-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-   
-
+.contact{
+    border: solid 5ps black;
+    padding: 15px;
 }
-.navbar-links ul{
-    list-style: none;
-    
-    
-}
-.navbar-links li {
-    margin: 0 15px;
-    display: inline-block;
-}
-
-.navbar-links ul li .links {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-.navbar-link ul li .links .active {
-    color: yellow;
-    border-radius: 4px;
-}
-
-.navbar-links li a:hover {
-    color: #A259FF;
-    border-radius: 5px;
-}
-
-.AboutMe{
-    padding: 50px 0;
-    width: 80%;
-    margin: auto auto;
-    background: linear-gradient(
-    135deg,
-    #121212 25%,
-    #1a1a1a 25%,
-    #1a1a1a 50%,
-    #121212 50%,
-    #121212 75%,
-    #1a1a1a 75%,
-    #1a1a1a
-  );
-  background-size: 40px 40px;
-  animation: move 4s linear infinite;
-}
-.AboutMeSquare{
-    border: solid 5px #A259FF;
-    width: 250px;
-    margin: 35px auto;
-}
-.AboutMeSquare p{
-    text-align: center;
-    color: #A259FF;
-    font-size: x-large;
-    font-weight: bolder;
-}
-.momento{
-    width:80%;
-    margin:auto auto;
-    
-
-}
-.momento p{
-    color:white;
-    font-size: larger;
-    text-align: center;
-}
-.offer{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 80%;
-    margin-top: 25px;
-    margin: auto auto;
-}
-.offer h3{
-    color:#A259FF;
-}
-.offer p{
-    color: white;
-}
-.offer div{
-    width: 40%;
-    margin: auto auto;
-}
-.Skills{
-    margin-top: 50px;
-    width: 100%;
-    height: max-content;
-  
-}
-.Skills h2{
-    text-align: center;
-    color: yellow;
-    font-size: x-large;
-    font-weight: bolder;
-    border: solid 5px yellow;
-    width: 250px;
-    margin: 35px auto;
-    padding: 12px;
-}
-.skill{
-    width: 80%;
-    height:35vh;
-    margin: 20px auto;
-    padding: 35px 15px;
-    background-color: #111111;
-    background-image: linear-gradient(
-        32deg,
-        rgba(8, 8, 8, 0.74) 30px,
-        transparent
-      );
-      background-size: 60px 60px;
-      background-position: -5px -5px;
-}
-.skill h3{
-    color: white;
-    text-align: center;
-    text-decoration: underline;
+.contact p{
     font-weight: bolder;
     font-size: larger;
-}
-.logos{
-    display: flex;
-    margin-top: 15px;
-    height: 35vh;
-}
-.logo img {
-    height: 70px;
-    
-
-}
-.logo{
-    margin: 25px 25px;
-    text-align: center;
-    color:white;
-    flex: 0 1 calc(40% - 8px);
-}
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    width: 100%;
-    height:25vh;
-    background-color: black2a;
-    color: #fff;
-    margin-top: 35px;
-    
-}
-
-.footer-left, .footer-center, .footer-right {
-    flex: 1;
-    text-align: center;
-}
-.footer-left{
-    padding-top: 10vh;
-}
-.footer-left #time{
-    margin-top: 12px;
-}
-.footer-center {
-    text-align: center;
-}
-.toTop{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 15px;
-}
-.toTop img{
-    width: 25px;
-    height: 25px;
-}
-
-.footerMid{
-    display: inline;
-
-}
-.footerMid img{
-    width: 35px;
-    height: 35px;
-    margin: 3px 3px;
-}
-.footerMid img:hover{
-    width: 50px;
-    height: 50px;
-}
-
-.footer-right {
-    padding-top: 7vh;
-    
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-ChatGPT said:
-ChatGPT
-Memory updated
-To make the provided CSS responsive, you can use media queries to adjust the layout and styling based on different screen sizes. Here’s how you can modify the CSS:
-
-css
-Copy code
-/* Base Styles */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    width: 90%;
-    margin: auto;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.nav-logo img {
-    height: 70px;
-}
-
-.navbar-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-.navbar-links li {
-    margin: 0 15px;
-    display: inline-block;
-}
-
-.navbar-links ul li .links {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-}
-
-.navbar-links li a:hover {
-    color: #A259FF;
-    border-radius: 5px;
-}
-
-.AboutMe {
-    padding: 50px 0;
-    width: 80%;
-    margin: auto;
-    background: linear-gradient(
-        135deg,
-        #121212 25%,
-        #1a1a1a 25%,
-        #1a1a1a 50%,
-        #121212 50%,
-        #121212 75%,
-        #1a1a1a 75%,
-        #1a1a1a
-    );
-    background-size: 40px 40px;
-    animation: move 4s linear infinite;
-}
-
-.AboutMeSquare {
-    border: solid 5px #A259FF;
-    width: 250px;
-    margin: 35px auto;
-}
-
-.AboutMeSquare p {
-    text-align: center;
-    color: #A259FF;
-    font-size: x-large;
-    font-weight: bolder;
-}
-
-.momento {
-    width: 80%;
-    margin: auto;
-}
-
-.momento p {
-    color: white;
-    font-size: larger;
+    color: black;
     text-align: center;
 }
 
-.offer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
-    margin-top: 25px;
-    margin: auto;
-}
 
-.offer h3 {
-    color: #A259FF;
-}
-
-.offer p {
-    color: white;
-}
-
-.offer div {
-    width: 40%;
-    margin: auto;
-}
-
-.Skills {
-    margin-top: 50px;
-    width: 100%;
-    height: max-content;
-}
-
-.Skills h2 {
-    text-align: center;
-    color: yellow;
-    font-size: x-large;
-    font-weight: bolder;
-    border: solid 5px yellow;
-    width: 250px;
-    margin: 35px auto;
-    padding: 12px;
-}
-
-.skill {
-    width: 80%;
-    height: 35vh;
-    margin: 20px auto;
-    padding: 35px 15px;
-    background-color: #111111;
-    background-image: linear-gradient(
-        32deg,
-        rgba(8, 8, 8, 0.74) 30px,
-        transparent
-    );
-    background-size: 60px 60px;
-    background-position: -5px -5px;
-}
-
-.skill h3 {
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    font-weight: bolder;
-    font-size: larger;
-}
-
-.logos {
-    display: flex;
-    margin-top: 15px;
-    height: 35vh;
-}
-
-.logo img {
-    height: 70px;
-}
-
-.logo {
-    margin: 25px 25px;
+h2 {
     text-align: center;
     color: white;
-    flex: 0 1 calc(40% - 8px);
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    width: 100%;
-    height: 25vh;
-    background-color: black2a;
-    color: #fff;
-    margin-top: 35px;
-}
-
-.footer-left, .footer-center, .footer-right {
-    flex: 1;
-    text-align: center;
-}
-
-.footer-left {
-    padding-top: 10vh;
-}
-
-.footer-left #time {
-    margin-top: 12px;
-}
-
-.footer-center {
-    text-align: center;
-}
-
-.toTop {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 15px;
-}
-
-.toTop img {
-    width: 25px;
-    height: 25px;
-}
-
-.footerMid {
-    display: inline;
-}
-
-.footerMid img {
-    width: 35px;
-    height: 35px;
-    margin: 3px 3px;
-}
-
-.footerMid img:hover {
-    width: 50px;
-    height: 50px;
-}
-
-.footer-right {
-    padding-top: 7vh;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .navbar-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .navbar-links li {
-        margin: 5px 0;
-    }
-    
-    .offer {
-        grid-template-columns: 1fr;
-    }
-    
-    .offer div {
-        width: 80%;
-    }
-    
-    .logos {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .logo {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-    
-    footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-left, .footer-center, .footer-right {
-        padding-top: 10px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .nav-logo img {
-        height: 50px;
-    }
-    
-    .AboutMeSquare {
-        width: 100%;
-    }
-    
-    .offer div {
-        width: 100%;
-    }
-    
-    .skill {
-        height: auto;
-    }
-    
-    .logo img {
-        height: 50px;
-    }
-}
-Key Adjustments:
-Media Queries:
-
-The first query targets devices with a screen width of 768px or less, adjusting the navigation layout, offers section, and logos for a better fit.
-The second query is for screens 480px or less, further resizing images and elements for smaller screens.
-Flexbox and Grid Adjustments:
-
-The flex and grid layouts are modified within media queries to ensure a single-column layout on smaller screens, making the design more mobile-friendly.
-Image Sizing:
-
-Images within the navigation and logos sections are resized to maintain readability and aesthetics on smaller devices.
-This should make your layout responsive across various screen sizes.
-
-
-
-
-
-
-You said:
-make the css styling for this contact page <div class="container">
-            <div class="mail">
-                <div class="contact"><h2>Contact Me</h2></div>
-                <p></p>
-                <form action="send.php" method="post">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-            
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-            
-                    <label for="contact">Contact Number:</label><br>
-                    <input type="text" id="contact" name="contact" required><br><br>
-            
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-            
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-            <div class="info">
-                <div class="contact"><h2>My Contact Details</h2></div>
-                <div class="Myemail">
-                    <fieldset>
-                        <legend>Email</legend>
-                        <p>ndivhuswiswi@gmail.com</p>
-                    </fieldset>
-                </div>
-                <div class="myContact">
-                    <fieldset>
-                        <legend>Contact Number</legend>
-                        <p>065-966-7572</p>
-                    </fieldset>
-                </div>
-                <div class="mySocialMedia">
-                    <fieldset>
-                        <legend>Social Media</legend>
-                        <div class="socio-icons">
-                            <a href="www.linkedin.com/in/ndivhuwo-neswiswi-163b55311"><img src="icons8-linked-in-94.png" alt="linkedin"></a>
-                            <a href="https://github.com/23026475"><img src="icons8-github-logo-94.png" alt="github"></a>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-ChatGPT said:
-ChatGPT
-Here's a CSS styling for the contact page that will make it visually appealing and responsive:
-
-css
-Copy code
-/* Base Styles */
-body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 1200px;
+form {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact h2 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.mail, .info {
-    flex: 1;
-    margin: 20px;
-}
-
-.mail form {
-    display: flex;
-    flex-direction: column;
-}
-
-.mail label {
-    margin-bottom: 5px;
+label {
     font-weight: bold;
-    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
 }
 
-.mail input[type="text"],
-.mail input[type="email"],
-.mail textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
     font-size: 16px;
 }
 
-.mail input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #A259FF;
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
     color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.mail input[type="submit"]:hover {
-    background-color: #9223db;
+input[type="submit"]:hover {
+    background-color: #A259FF;
 }
-
-.info fieldset {
-    border: 2px solid #A259FF;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.info legend {
-    font-size: 18px;
-    color: #A259FF;
-    font-weight: bold;
-}
-
-.info p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.socio-icons {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
-}
-
-.socio-icons a {
-    margin-right: 15px;
-}
-
-.socio-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.socio-icons img:hover {
-    transform: scale(1.1);
+.info{
+    
+    height: 95vh;
+    width: 70%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
 }
 
 .info legend{
