@@ -1,9 +1,11 @@
-body{
+/* Base styles */
+body {
     margin: 0;
     padding: 0;
     background-color: #8B8B8B;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -28,11 +30,11 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
-.navbar-links ul{
+
+.navbar-links ul {
     list-style: none;
-    
-    
 }
+
 .navbar-links li {
     margin: 0 15px;
     display: inline-block;
@@ -49,21 +51,20 @@ nav {
     color: #A259FF;
     border-radius: 5px;
 }
+
 .navbar-links li .Projects a.active {
     background-color: #04AA6D;
     color: white;
 }
 
-.mid-section{
+.mid-section {
     width: 100%;
-    padding:20px;
+    padding: 20px;
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
 }
 
-
-/* sidebar */
-
-
+/* Sidebar */
 .sidebar {
     width: 200px;
     position: fixed;
@@ -100,6 +101,7 @@ nav {
     width: calc(100% - 220px);
     flex: 1;
 }
+
 .container::before {
     content: '';
     width: 2px;
@@ -109,6 +111,7 @@ nav {
     top: 0;
     bottom: 0;
 }
+
 .card {
     position: relative;
     display: grid;
@@ -118,25 +121,29 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     background-color: #D9D9D9;
 }
-.siteImage img{
+
+.siteImage img {
     width: 80%;
     height: 60vh;
-    margin-left: 50px; 
+    margin-left: 50px;
     transform: translateY(-50px);
 }
+
 .siteDescription {
-    width: 80%;          
-    height: 40vh;          
-    padding: 10px; 
-    margin: 15px auto;        
-    background-color: #fff; 
-    border: 1px solid #ccc; 
-    overflow-y: auto;       
+    width: 80%;
+    height: 40vh;
+    padding: 10px;
+    margin: 15px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow-y: auto;
 }
+
 .siteDescription p {
     margin-bottom: 10px;
     line-height: 1.5;
 }
+
 .siteDescription button {
     width: 180px;
     height: 40px;
@@ -152,14 +159,14 @@ nav {
     cursor: pointer;
     box-shadow: 1px 3px 0px rgb(139, 113, 255);
     transition-duration: .3s;
-  }
+}
 
-  /* Footer styling */
-  footer {
+/* Footer styling */
+footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    height:25vh;
+    height: 25vh;
     background-color: #1A1A1A;
     color: #fff;
 }
@@ -168,35 +175,41 @@ nav {
     flex: 1;
     text-align: center;
 }
-.footer-left, .footer-right{
+
+.footer-left, .footer-right {
     padding-top: 15vh;
 }
-.footer-left #time{
+
+.footer-left #time {
     margin-top: 12px;
 }
+
 .footer-center {
     text-align: center;
 }
-.toTop{
+
+.toTop {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     margin-bottom: 15px;
 }
-.toTop img{
+
+.toTop img {
     width: 25px;
     height: 25px;
 }
 
-.footerMid{
+.footerMid {
     display: inline;
-
 }
-.footerMid img{
+
+.footerMid img {
     width: 35px;
     height: 35px;
     margin: 3px 3px;
 }
-.footerMid img:hover{
+
+.footerMid img:hover {
     width: 50px;
     height: 50px;
 }
@@ -215,4 +228,69 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 180px;
+        position: fixed;
+        height: auto; /* Adjust height to auto */
+        padding-top: 10px;
+    }
 
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .card {
+        margin: 25px 0 75px 25px;
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .siteImage img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .siteDescription {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .mid-section {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .content {
+        margin: 0;
+        width: 100%;
+    }
+
+    .card {
+        margin: 25px 0;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-left, .footer-right {
+        padding-top: 0;
+    }
+}

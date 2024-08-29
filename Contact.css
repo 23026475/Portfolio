@@ -53,90 +53,112 @@ nav {
     background-color: #04AA6D;
     color: white;
 }
-.container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 100%;
-    margin-top: 50px;
-}
-.mail{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-.contact{
-    border: solid 5ps black;
-    padding: 15px;
-}
-.contact p{
-    font-weight: bolder;
-    font-size: larger;
-    color: black;
-    text-align: center;
-}
-
-
-h2 {
-    text-align: center;
-    color: white;
-}
-
-form {
-    background-color: #fff;
-    max-width: 500px;
-    margin: 0 auto;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 8px;
+    max-width: 1200px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
+.contact h2 {
+    text-align: center;
     color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.mail {
+    width: 60%;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.info {
+    width: 35%;
+}
+
+.mail, .info {
+    flex: 1;
+    margin: 20px;
+}
+
+.mail form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.mail input[type="text"],
+.mail input[type="email"],
+.mail textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 5px;
     font-size: 16px;
 }
 
-textarea {
-    resize: vertical;
-}
-
-input[type="submit"] {
-    background-color: #28a745;
+.mail input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #A259FF;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
-    background-color: #A259FF;
+.mail input[type="submit"]:hover {
+    background-color: #9223db;
 }
-.info{
-    
-    height: 95vh;
-    width: 70%;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
+
+.info fieldset {
+    border: 2px solid #A259FF;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.info legend {
+    font-size: 18px;
+    color: #A259FF;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.socio-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.socio-icons a {
+    margin-right: 15px;
+}
+
+.socio-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.socio-icons img:hover {
+    transform: scale(1.1);
 }
 
 .info legend{
@@ -207,5 +229,44 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .mail, .info {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .socio-icons {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .nav-logo img {
+        height: 50px;
+    }
+    
+    .AboutMeSquare {
+        width: 100%;
+    }
+    
+    .offer div {
+        width: 100%;
+    }
+    
+    .skill {
+        height: auto;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+}
+
 
 
