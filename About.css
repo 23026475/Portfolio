@@ -30,6 +30,10 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
+.navbar-links a.active {
+    color: yellow;
+    border-radius: 5px;
+}
 
 .navbar-links li {
     margin: 0 15px;
