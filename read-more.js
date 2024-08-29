@@ -1,4 +1,4 @@
-document.querySelectorAll('.read-more-btn').forEach(button => {
+document.querySelectorAll('.readMore').forEach(button => {
     button.addEventListener('click', () => {
         const siteDescription = button.parentElement;
         siteDescription.classList.toggle('expanded');
